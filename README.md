@@ -6,6 +6,6 @@ This is a repository of all the projects that I have completed. Feel free to che
 disease spread using mathematical methods in python.
 
 ## power query & excel 📊
-1. [Cyclistic Case Study](): Capstone project in Google Data Analytics Professional Certification program.
+1. [Cyclistic Case Study](https://github.com/harigovindr2003/projects/tree/main/Cyclistic%20Case%20Study): Capstone project in Google Data Analytics Professional Certification program.
 Analysed large data to make visualisations and to find strategies to increase the membership.
    

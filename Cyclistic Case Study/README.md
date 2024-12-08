@@ -10,7 +10,7 @@ Three questions will guide the future marketing program:
 
 **Prepare – Description of Data Sources Used**
 
-Use Cyclist’s historical trip data to analyze and identify trends. The data used has been made available by Motivate International Inc. The data is public data and can be used for research purposes like this without exposing the rider’s personally identifiable information to avoid privacy concerns.
+Use Cyclist’s historical trip data to analyze and identify trends. The data used has been made available by Motivate International Inc. The data is public data and can be used for research purposes like this without exposing the rider’s personally identifiable information to avoid privacy concerns. The source data is large at about 426k data points.
 
 For this case study, we will use the data for the first quarter of 2020. We will download the csv file for all the months one by one from the data repository.
 

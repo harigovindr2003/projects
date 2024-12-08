@@ -1,0 +1,7 @@
+Case,Beta,Gamma,Population,Initial Infected (I0),Time (T)
+High Transmission, Low Recovery,0.75,0.25,1000,10,100
+Low Transmission, Low Recovery,0.25,0.25,1000,10,100
+Low Transmission, High Recovery,0.25,0.75,1000,10,100
+High Transmission, High Recovery,0.75,0.75,1000,10,100
+Higher I0,0.5,0.5,1000,100,100
+Lower I0,0.5,0.5,1000,10,100

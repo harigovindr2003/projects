@@ -55,22 +55,22 @@ Now we use “Pivot Charts” to make visualizations to see the difference in us
 This supports our initial assumptions that members are indeed more profitable than casual riders since they make many times more rides than casual riders.
 
 **Rides by day of the week**
-![by day](https://github.com/user-attachments/assets/21e66274-0a31-48c6-863d-e06c8ca77257)
+![](https://github.com/harigovindr2003/projects/blob/main/Cyclistic%20Case%20Study/distribution%20by%20day.png)
 
 Members use the bikes more on workdays and casual rides use it more on weekends, most on Sunday. Together they use the bike service most on Tuesday. So, Tuesday is most traffic day for Cyclist.
 
 This suggests that the members are mainly office commuters and the casual riders are mostly tourists.
 
 **Rides by hour of day**
-![by hour](https://github.com/user-attachments/assets/84960ab1-f7f6-46d2-b981-288a7190b9af)
+![](https://github.com/harigovindr2003/projects/blob/main/Cyclistic%20Case%20Study/distribution%20by%20hour.png)
 
 Members use the service the most during office commute hours, i.e. early morning and in the evenings. This further proves that the bulk of members are office commuters. The casual riders see a very sharp decline in the early morning commuting hours, this is also in line with our earlier observation that they are mostly made up of tourists.
 
 **Rides by ride length buckets**
-![casual by ride length](https://github.com/user-attachments/assets/f34b8479-8522-40e0-af00-39f53a04b840)
+![](https://github.com/harigovindr2003/projects/blob/main/Cyclistic%20Case%20Study/ride%20length%20bucket%20of%20casual%20riders.png)
 
 Here we can see that the casual riders frequently make rides that are more than 20 minutes. This might mean that casual riders are using the bikes for leisure exploration. The frequencies for “Less than 5 minutes” ride are the least for casual riders. This suggests that the tourists would have more rides that are longer.
-![member by ride length](https://github.com/user-attachments/assets/22de4358-0917-4955-8b4e-d1376f6e4b98)
+![](https://github.com/harigovindr2003/projects/blob/main/Cyclistic%20Case%20Study/ride%20length%20bucket%20of%20members.png)
 
 Member riders most frequently make rides that are 5-10 minutes long. We see that the members have often fixed commute times. If the commute time was higher, they would most likely for other transportation methods. So, “More than 20 minutes” rides are least for them.
 

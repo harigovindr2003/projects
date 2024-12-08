@@ -50,7 +50,7 @@ We can use Pivot Table to find the relevant summary statistics for relevant fiel
 Now we use “Pivot Charts” to make visualizations to see the difference in usage patterns between them.
 
 **Total Number of Rides**
-![casual and members](https://github.com/user-attachments/assets/523746d5-668b-4647-8a66-c51fddd3541d)
+!(https://github.com/harigovindr2003/projects/blob/main/Cyclistic%20Case%20Study/casual%20vs%20members.png)
 
 This supports our initial assumptions that members are indeed more profitable than casual riders since they make many times more rides than casual riders.
 

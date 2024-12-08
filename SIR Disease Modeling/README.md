@@ -13,3 +13,8 @@ The model works by dividing the entire population into three categories:
 3. **Recovered or Removed (R):** Individuals who have recovered from the disease or who have passed away from the disease. 
 The model then traces the movement of individuals between these compartments over time, 
 typically measured in days or weeks to provide valuable insights about the spread of the disease
+
+## Running Simulations
+The simulation will be run with different values for recovery and transmission rates to study their effects on disease spread. The total population is assumed to be 1000 individuals and simulation time is taken as 100 days for convenience. Effect of the number of initial infected individuals will be observed by first running the simulation with less I0, say 10 individuals, then say a higher I0 of say 100.
+[parameters](https://github.com/harigovindr2003/projects/tree/main/SIR%20Disease%20Modeling/parameters.md)
+[results](https://github.com/harigovindr2003/projects/tree/main/SIR%20Disease%20Modeling/results)

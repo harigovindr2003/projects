@@ -21,6 +21,7 @@ Since all historical data is saved in a CSV file, you can easily analyze it late
 
 Ensure that you have Python 3.x installed. You will also need the following Python packages:
 - `pandas` (for saving results to a CSV file)
+- `keyboard` (for skip funciton in timer)
 
 ### Installing Dependencies
 
@@ -28,6 +29,7 @@ To install the required dependencies, run:
 
 ```bash
 pip install pandas
+pip install keyboard
 ```
 
 ### Running the Program

@@ -70,7 +70,7 @@ def main():
     accuracy = 0
     avg_time = 0
     clear_console()
-    print("\n---Welcome to the Exam Prep Tracker!---")
+    print("\n---Welcome to the Exam Practice Tracker!---")
     print("1. Exam Mode")
     print("2. Sectional Mode")
     print("3. Questions Mode")

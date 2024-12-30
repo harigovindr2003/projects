@@ -2,7 +2,10 @@
 import pandas as pd
 import time
 from datetime import datetime
+import threading
 import os
+import keyboard
+import sys
 
 # Edit settings here
 cut_off = 85  # percentage required to clear cut-off
@@ -167,14 +170,39 @@ def section_countdown(t):
     input(f"Press Enter to start {sections_matrix[t][0]} in 5 seconds...")
     print("Starting in ")
     for j in range(5, 0, -1):
-        print(f"{j}...", end="\n")
+        sys.stdout.write(f"\r{j}...")
+        sys.stdout.flush()
         time.sleep(1)
-    print(f"{sections_matrix[t][0]} timer started! You have {int(sections_matrix[t][2]/60)} minutes.")
-    for remaining in range(sections_matrix[t][2], 0, -60):
-        mins, _ = divmod(remaining, 60)
-        print(f"Time left: {mins} minute(s)", end="\n", flush=True)
-        time.sleep(60)  # Wait for one minute
-    print(f"Time is up for {sections_matrix[t][0]}!")
+    print(f"\n{sections_matrix[t][0]} timer started! You have {int(sections_matrix[t][2]/60)} minutes.")
+    print("Press Space to skip the remaining time.")
+    skip_flag = [False]  # To indicate skip
+    console_lock = threading.Lock()  # Ensure clean output
+    def check_skip():
+        while not skip_flag[0]:
+            if keyboard.is_pressed("space"):
+                with console_lock:
+                    print(f"\nSkipping the remaining time for {sections_matrix[t][0]}...")
+                skip_flag[0] = True
+    # Start a separate thread for checking skip key press
+    skip_thread = threading.Thread(target=check_skip)
+    skip_thread.daemon = True
+    skip_thread.start()
+    # Countdown for the section
+    remaining_time = sections_matrix[t][2]  # Total time in seconds
+    while remaining_time > 0:
+        if skip_flag[0]:
+            with console_lock:
+                print(f"Skipped the remaining time for {sections_matrix[t][0]}.")
+            return
+        mins, secs = divmod(remaining_time, 60)
+        with console_lock:
+            sys.stdout.write("\r" + " " * 50 + "\r")
+            sys.stdout.write(f"Time left: {mins} minute(s) {secs} second(s)")
+            sys.stdout.flush()
+        time.sleep(1)
+        remaining_time -= 1
+    if not skip_flag[0]:
+        print(f"\nTime is up for {sections_matrix[t][0]}!")
 
 # Calcuate result function
 def calculate(section, subsection, duration, totals, attempts, wrongs, correct_marks, wrong_marks, save):
@@ -213,5 +241,3 @@ def clear_console():
 # Start the program
 if __name__ == "__main__":
     main()
-
-

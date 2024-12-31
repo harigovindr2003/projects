@@ -7,6 +7,7 @@ import os
 import keyboard
 import sys
 
+
 # Edit settings here
 cut_off = 85  # percentage required to clear cut-off
 time_qn = 42  # desired time in seconds under which each question should be marked
@@ -159,7 +160,7 @@ def questions_mode():
     stop_time = datetime.now()
     duration = int((stop_time - start_time).total_seconds())
     totals = int(input("Total number of questions: "))
-    attempts = int(input("Number of Attempted: "))
+    attempts = int(input("Number of questions attempted: "))
     wrongs = int(input("How many wrong: "))
     calculate(section, subsection, duration, totals, attempts, wrongs, correct_marks, wrong_marks,1)
     input("\nPress Enter to restart...")
@@ -203,19 +204,20 @@ def section_countdown(t):
         remaining_time -= 1
     if not skip_flag[0]:
         print(f"\nTime is up for {sections_matrix[t][0]}!")
+        os.system('echo "\a"')
 
 # Calcuate result function
 def calculate(section, subsection, duration, totals, attempts, wrongs, correct_marks, wrong_marks, save):
     corrects = attempts - wrongs
     marks = (corrects * correct_marks) - (wrongs * wrong_marks)
     avg_time = int(duration / attempts) if attempts > 0 else 0
-    accuracy = int((corrects / totals) * 100) if totals > 0 else 0
-    percentage = int((marks / totals) * 100) if totals > 0 else 0
+    accuracy = int((corrects / attempts) * 100)
+    percentage = int((marks / totals) * 100)
     print("\n--- Results ---")
     print(f"Section: {section}")
     print(f"Subsection: {subsection}")
     print(f"Duration: {int(duration/60)} min")
-    print(f"Score: {marks}/{attempts} marks")
+    print(f"Score: {marks}/{totals} marks")
     print(f"Percentage: {percentage}%")
     print(f"Accuracy: {accuracy}%")
     print(f"Average Time per Question: {avg_time}s")

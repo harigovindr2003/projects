@@ -35,3 +35,5 @@ This project aims to predict house prices using **multiple linear regression**. 
 6. **Prediction & Kaggle Submission**
     - The trained model is used to predict **`SalePrice`** in the test dataset.
     - A **submission file** is generated and submitted to Kaggle and achieved a public score of 0.16670 (RMSLE). While this is a solid baseline, future improvements could include advanced feature engineering and more advanced models like ensemble methods which could further improve the score.
+
+View the full Jupyter Notebook [here](https://github.com/harigovindr2003/projects/blob/main/House%20Prices%20-%20Advanced%20Regression%20Techniques/main.ipynb).
